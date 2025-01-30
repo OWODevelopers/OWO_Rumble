@@ -14,11 +14,11 @@ namespace Rumble_bhaptics
 {
     public class OWO_Rumble : MelonMod
     {
-        public static TactsuitVR tactsuitVr;
+        public static OWOSkin tactsuitVr;
 
         public override void OnInitializeMelon()
         {
-            tactsuitVr = new TactsuitVR();
+            tactsuitVr = new OWOSkin();
             tactsuitVr.PlaybackHaptics("HeartBeat");
         }
 

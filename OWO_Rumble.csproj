@@ -63,7 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyOWOSkin.cs" />
+    <Compile Include="OWOSkin.cs" />
     <Compile Include="OWO_Rumble.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
