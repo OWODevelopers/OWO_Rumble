@@ -33,10 +33,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony, Version=2.3.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Lib.Harmony.2.3.3\lib\net472\0Harmony.dll</HintPath>
+      <HintPath>packages\Lib.Harmony.2.3.3\lib\net48\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="MelonLoader, Version=0.6.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\LavaGang.MelonLoader.0.6.6\lib\net35\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="OWO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\OWO.2.4.2\lib\net48\OWO.dll</HintPath>
     </Reference>
     <Reference Include="RUMBLE.Runtime">
       <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\RUMBLE\MelonLoader\Dependencies\Il2CppAssemblyGenerator\Cpp2IL\cpp2il_out\RUMBLE.Runtime.dll</HintPath>
