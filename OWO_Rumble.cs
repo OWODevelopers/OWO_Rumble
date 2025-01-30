@@ -12,7 +12,7 @@ using RUMBLE.Players;
 
 namespace Rumble_bhaptics
 {
-    public class Rumble_bhaptics : MelonMod
+    public class OWO_Rumble : MelonMod
     {
         public static TactsuitVR tactsuitVr;
 

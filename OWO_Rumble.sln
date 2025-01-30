@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rumble_bhaptics", "Rumble_bhaptics.csproj", "{C61B7691-1FC1-41E8-8216-829319F61B44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWO_Rumble", "OWO_Rumble.csproj", "{C61B7691-1FC1-41E8-8216-829319F61B44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

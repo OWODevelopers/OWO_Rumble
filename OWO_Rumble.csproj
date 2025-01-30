@@ -7,8 +7,8 @@
     <ProjectGuid>{C61B7691-1FC1-41E8-8216-829319F61B44}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rumble_bhaptics</RootNamespace>
-    <AssemblyName>Rumble_bhaptics</AssemblyName>
+    <RootNamespace>OWO_Rumble</RootNamespace>
+    <AssemblyName>OWO_Rumble</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -59,8 +59,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyBhapticsTactsuit.cs" />
-    <Compile Include="Rumble_bhaptics.cs" />
+    <Compile Include="MyOWOSkin.cs" />
+    <Compile Include="OWO_Rumble.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
