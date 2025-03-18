@@ -35,5 +35,5 @@ using MelonLoader;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0")]
 [assembly: AssemblyFileVersion("1.0.0")]
-[assembly: MelonInfo(typeof(Rumble_bhaptics.OWO_Rumble), "Rumble_bhaptics", "1.0.0", "Florian Fahrenberger")]
+[assembly: MelonInfo(typeof(Rumble_OWO.OWO_Rumble), "Rumble_bhaptics", "1.0.0", "Florian Fahrenberger")]
 [assembly: MelonGame("Buckethead Entertainment", "RUMBLE")]

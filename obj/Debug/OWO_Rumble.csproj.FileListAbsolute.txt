@@ -1,0 +1,14 @@
+C:\OWO\Proyectos\OWO_Rumble\obj\Debug\OWO_Rumble.csproj.AssemblyReference.cache
+C:\OWO\Proyectos\OWO_Rumble\obj\Debug\OWO_Rumble.csproj.CoreCompileInputs.cache
+C:\OWO\Proyectos\OWO_Rumble\bin\Debug\OWO_Rumble.dll
+C:\OWO\Proyectos\OWO_Rumble\bin\Debug\OWO_Rumble.pdb
+C:\OWO\Proyectos\OWO_Rumble\bin\Debug\0Harmony.dll
+C:\OWO\Proyectos\OWO_Rumble\bin\Debug\MelonLoader.dll
+C:\OWO\Proyectos\OWO_Rumble\bin\Debug\OWO.dll
+C:\OWO\Proyectos\OWO_Rumble\bin\Debug\0Harmony.pdb
+C:\OWO\Proyectos\OWO_Rumble\bin\Debug\0Harmony.xml
+C:\OWO\Proyectos\OWO_Rumble\bin\Debug\MelonLoader.xml
+C:\OWO\Proyectos\OWO_Rumble\bin\Debug\OWO.xml
+C:\OWO\Proyectos\OWO_Rumble\obj\Debug\OWO_Rumble.csproj.Up2Date
+C:\OWO\Proyectos\OWO_Rumble\obj\Debug\OWO_Rumble.dll
+C:\OWO\Proyectos\OWO_Rumble\obj\Debug\OWO_Rumble.pdb
