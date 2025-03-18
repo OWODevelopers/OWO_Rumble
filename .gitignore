@@ -3,6 +3,7 @@
 ################################################################################
 
 *.vsidx
+/bin
 /obj/Debug
 /obj/Debug/build.force
 /packages/Lib.Harmony.2.3.5
