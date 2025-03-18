@@ -1,24 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using HarmonyLib;
+using Il2CppRUMBLE.MoveSystem;
+using Il2CppRUMBLE.Players;
+using Il2CppRUMBLE.Players.Subsystems;
 using MelonLoader;
-using HarmonyLib;
-using RUMBLE.MoveSystem;
-using RUMBLE.Players;
+using Rumble_OWO;
 
-namespace Rumble_OWO
+[assembly: MelonInfo(typeof(OWO_Rumble.OWO_Rumble), "OWO_Rumble", "1.0.0", "OWO Game")]
+[assembly: MelonGame("Buckethead Entertainment", "RUMBLE")]
+
+namespace OWO_Rumble
 {
     public class OWO_Rumble : MelonMod
     {
-        public static OWOSkin owoSkin;
+        public static OWOSkin owoSkin = null!;
 
         public override void OnInitializeMelon()
         {
             owoSkin = new OWOSkin();
-            owoSkin.LOG("HOLA");
         }
 
         //[HarmonyPatch(typeof(CombatManager), "RegisterPlayerHitEvent", new Type[] { typeof(Player), typeof(Structure) })]
@@ -27,7 +25,8 @@ namespace Rumble_OWO
         //    [HarmonyPostfix]
         //    public static void Postfix(CombatManager __instance, Structure structure, Player player)
         //    {
-        //        if (player.Controller.ControllerType != ControllerType.Local) return;
+        //        owoSkin.LOG($"RegisterPlayerHitEvent - structure:{structure.ResourceName}, player:{player.Data.GeneralData}");
+        //        //if (player.Controller.ControllerType != ControllerType.Local) return;
         //    }
         //}
 
@@ -37,21 +36,37 @@ namespace Rumble_OWO
         //    [HarmonyPostfix]
         //    public static void Postfix(CombatManager __instance, Structure structure, Player player)
         //    {
-        //        if (player.Controller.ControllerType != ControllerType.Local) return;
+        //        owoSkin.LOG($"RegisterPlayerHitFromBeneathEvent - structure:{structure.ResourceName}, player:{player.Data.GeneralData}");
+        //        //if (player.Controller.ControllerType != ControllerType.Local) return;
         //    }
         //}
 
-        //[HarmonyPatch(typeof(RUMBLE.Players.Subsystems.PlayerHealth), "UpdateLocalHealthbarPercentage", new Type[] { typeof(float), typeof(bool) })]
+        [HarmonyPatch(typeof(PlayerHealth), "ReduceHealth")]
+        public class ReduceHealth
+        {
+            [HarmonyPostfix]
+            public static void PostFix(short amount)
+            {
+                owoSkin.LOG($"ReduceHealth - Damage: {amount}");
+            }
+        }
+
+        //[HarmonyPatch(typeof(Il2CppRUMBLE.Players.Subsystems.PlayerHealth), "UpdateLocalHealthbarPercentage", new Type[] { typeof(float), typeof(bool) })]
         //public class bhaptics_PlayerUpdateHealth
         //{
         //    [HarmonyPostfix]
-        //    public static void Postfix(RUMBLE.Players.Subsystems.PlayerHealth __instance, float percentage)
+        //    public static void Postfix(Il2CppRUMBLE.Players.Subsystems.PlayerHealth __instance, float currentHealth, float lastHealth)
         //    {
-        //        if (percentage <= 0.25f) owoSkin.StartHeartBeat();
-        //        else owoSkin.StopHeartBeat();
+        //        //cuando se cura
+        //        if (lastHealth < currentHealth) owoSkin.Feel("Heal");
+
+        //        //Gestionar heatbeat
+        //        if (currentHealth <= 0.25f) owoSkin.StartHeartBeat();
+        //        else if (owoSkin.heartBeatIsActive)
+        //        {
+        //            owoSkin.StopHeartBeat();
+        //        }
         //    }
         //}
-
-
     }
 }

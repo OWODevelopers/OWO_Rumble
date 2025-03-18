@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "OWO_Rumble/1.0.0": {
+        "dependencies": {
+          "OWO": "2.4.2"
+        },
+        "runtime": {
+          "OWO_Rumble.dll": {}
+        }
+      },
+      "OWO/2.4.2": {
+        "runtime": {
+          "lib/net6.0/OWO.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OWO_Rumble/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OWO/2.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-co/LsxebKFv2ZHL97rar5i1lAmGvl0Z9P08iF/i8R5hqaOzNsbuFNqHWArVmq9MBQArkUQyQpRa3oygDZv46Ig==",
+      "path": "owo/2.4.2",
+      "hashPath": "owo.2.4.2.nupkg.sha512"
+    }
+  }
+}

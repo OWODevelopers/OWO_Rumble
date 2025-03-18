@@ -1,9 +1,8 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32602.291
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWO_Rumble", "OWO_Rumble.csproj", "{C61B7691-1FC1-41E8-8216-829319F61B44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWO_Rumble", "OWO_Rumble.csproj", "{93BDAE48-A985-4DFD-A56F-BE7008A166F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C61B7691-1FC1-41E8-8216-829319F61B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C61B7691-1FC1-41E8-8216-829319F61B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C61B7691-1FC1-41E8-8216-829319F61B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C61B7691-1FC1-41E8-8216-829319F61B44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93BDAE48-A985-4DFD-A56F-BE7008A166F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93BDAE48-A985-4DFD-A56F-BE7008A166F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93BDAE48-A985-4DFD-A56F-BE7008A166F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93BDAE48-A985-4DFD-A56F-BE7008A166F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2A0DABC5-3CDD-4A03-8096-2703E6BA0F58}
+		SolutionGuid = {20EAE01A-767E-4B52-B3B8-A46A20785B1E}
 	EndGlobalSection
 EndGlobal

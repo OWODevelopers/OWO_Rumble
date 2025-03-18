@@ -13,7 +13,7 @@ namespace Rumble_OWO
     {
         public bool suitDisabled = true;
         public bool systemInitialized = false;
-        private static bool heartBeatIsActive = false;
+        public bool heartBeatIsActive = false;
 
 
         public Dictionary<String, Sensation> FeedbackMap = new Dictionary<string, Sensation>();

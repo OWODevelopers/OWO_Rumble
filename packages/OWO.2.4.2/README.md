@@ -1,1 +1,0 @@
-https://owo-game.gitbook.io/owo-api/
