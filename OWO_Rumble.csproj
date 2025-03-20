@@ -15,6 +15,10 @@
       <HintPath>0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Il2CppBucketheadEntertainment.Plugins">
+      <HintPath>libs\Il2CppBucketheadEntertainment.Plugins.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Il2CppInterop.Runtime">
       <HintPath>libs\Il2CppInterop.Runtime.dll</HintPath>
       <Private>False</Private>
@@ -33,6 +37,10 @@
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>libs\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>libs\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

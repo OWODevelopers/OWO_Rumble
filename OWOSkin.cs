@@ -14,6 +14,7 @@ namespace Rumble_OWO
         public bool suitDisabled = true;
         public bool systemInitialized = false;
         public bool heartBeatIsActive = false;
+        public bool onGuardIsActive = false;
 
 
         public Dictionary<String, Sensation> FeedbackMap = new Dictionary<string, Sensation>();
@@ -162,8 +163,52 @@ namespace Rumble_OWO
             heartBeatIsActive = false;
         }
 
+        #endregion        
+        
+        #region OnGuard
+
+        public async Task OnGuardFuncAsync()
+        {
+            while (onGuardIsActive)
+            {
+                Feel("Heart Beat", 0);
+                await Task.Delay(1000);
+            }
+        }
+        public void StartOnGuard()
+        {
+            if (onGuardIsActive) return;
+
+            onGuardIsActive = true;
+            OnGuardFuncAsync();
+        }
+
+        public void StopOnGuard()
+        {
+            onGuardIsActive = false;
+        }
+
         #endregion
 
+        public void PlayBackHit(String key, float myRotation)
+        {
+            Sensation hitSensation = Sensation.Parse("100,3,76,0,200,0,Impact");
+
+            if (myRotation >= 0 && myRotation <= 180)
+            {
+                if (myRotation >= 0 && myRotation <= 90) hitSensation = hitSensation.WithMuscles(Muscle.Dorsal_L, Muscle.Lumbar_L);
+                else hitSensation = hitSensation.WithMuscles(Muscle.Dorsal_R, Muscle.Lumbar_R);
+            }
+            else
+            {
+                if (myRotation >= 270 && myRotation <= 359) hitSensation = hitSensation.WithMuscles(Muscle.Pectoral_L, Muscle.Abdominal_L);
+                else hitSensation.WithMuscles(Muscle.Pectoral_R, Muscle.Abdominal_R);
+            }
+
+            if (suitDisabled) { return; }
+            OWO.Send(hitSensation.WithPriority(3));
+
+        }
 
         public void StopAllHapticFeedback()
         {
