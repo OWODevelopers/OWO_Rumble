@@ -1,10 +1,6 @@
 ﻿using MelonLoader;
 using OWOGame;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace Rumble_OWO
 {
@@ -114,7 +110,7 @@ namespace Rumble_OWO
         public string[] GetIPsFromFile(string filename)
         {
             List<string> ips = new List<string>();
-            string filePath = Directory.GetCurrentDirectory() + "\\BepinEx\\Plugins\\OWO" + filename;
+            string filePath = Directory.GetCurrentDirectory() + "\\Mods" + filename;
             if (File.Exists(filePath))
             {
                 LOG("Manual IP file found: " + filePath);
@@ -171,7 +167,7 @@ namespace Rumble_OWO
         {
             while (onGuardIsActive)
             {
-                Feel("Heart Beat", 0);
+                Feel("Pose Guard");
                 await Task.Delay(1000);
             }
         }
@@ -190,29 +186,10 @@ namespace Rumble_OWO
 
         #endregion
 
-        public void PlayBackHit(String key, float myRotation)
-        {
-            Sensation hitSensation = Sensation.Parse("100,3,76,0,200,0,Impact");
-
-            if (myRotation >= 0 && myRotation <= 180)
-            {
-                if (myRotation >= 0 && myRotation <= 90) hitSensation = hitSensation.WithMuscles(Muscle.Dorsal_L, Muscle.Lumbar_L);
-                else hitSensation = hitSensation.WithMuscles(Muscle.Dorsal_R, Muscle.Lumbar_R);
-            }
-            else
-            {
-                if (myRotation >= 270 && myRotation <= 359) hitSensation = hitSensation.WithMuscles(Muscle.Pectoral_L, Muscle.Abdominal_L);
-                else hitSensation.WithMuscles(Muscle.Pectoral_R, Muscle.Abdominal_R);
-            }
-
-            if (suitDisabled) { return; }
-            OWO.Send(hitSensation.WithPriority(3));
-
-        }
-
         public void StopAllHapticFeedback()
         {
             StopHeartBeat();
+            StopOnGuard();
 
             OWO.Stop();
         }
