@@ -36,19 +36,6 @@ namespace OWO_Rumble
             }
         }
 
-        [HarmonyPatch(typeof(InteractionBase), "StartInteraction")]
-        public class OWO_StartInteractionBase
-        {
-            [HarmonyPostfix]
-            public static void Postfix(InteractionHand hand)
-            {
-                if (hand.ParentController.ControllerType != ControllerType.Local) return;
-                //owoSkin.LOG($"StartInteractionBase - name: {hand.name}, GameObjectTag: {hand.gameObject.tag}");
-                owoSkin.Feel("Interaction enviroment");
-            }
-        }
-
-
         [HarmonyPatch(typeof(PlayerHealth), "SetHealth")]
         public class OWO_SetHealth
         {
