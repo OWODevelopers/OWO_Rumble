@@ -167,7 +167,7 @@ namespace Rumble_OWO
         {
             while (onGuardIsActive)
             {
-                Feel("Pose Guard");
+                Feel("Pose Guard", 0);
                 await Task.Delay(1000);
             }
             guardFunction = null;
