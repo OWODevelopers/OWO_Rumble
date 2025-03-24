@@ -68,7 +68,7 @@ namespace Rumble_OWO
         {
             LOG("Initializing OWO skin");
 
-            var gameAuth = GameAuth.Create(AllBakedSensations()).WithId("67884529");
+            var gameAuth = GameAuth.Create(AllBakedSensations()).WithId("42156354");
 
             OWO.Configure(gameAuth);
             string[] myIPs = GetIPsFromFile("OWO_Manual_IP.txt");
