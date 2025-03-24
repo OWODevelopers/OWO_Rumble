@@ -64,9 +64,6 @@ namespace OWO_Rumble
             {
                 if (__instance.ParentController.ControllerType != ControllerType.Local) return;
 
-                owoSkin.LOG($"OnPoseSetCompleted - isValidPose: {set.name} {set.IsValid()}");
-                __instance.ParentController.AssignedPlayer.Data.GeneralData.BattlePoints += 200;
-
                 switch (set.name)
                 {
                     case "PoseSetRockjump":
