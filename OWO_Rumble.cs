@@ -31,7 +31,7 @@ namespace OWO_Rumble
             public static void Postfix(CombatManager __instance, Structure structure, Player player)
             {
                 if (player.Controller.ControllerType != ControllerType.Local) return;
-                owoSkin.Feel("Jump");
+                owoSkin.Feel("Jump", 1);
 
             }
         }
@@ -44,14 +44,14 @@ namespace OWO_Rumble
             {
                 if (__instance.ParentController.ControllerType != ControllerType.Local) return;
 
-                if (newHealth < previousHealth) owoSkin.Feel("Impact");
-                else owoSkin.Feel("Heal");
+                if (newHealth < previousHealth) owoSkin.Feel("Impact", 2);
+                else owoSkin.Feel("Heal", 1);
 
                 if (newHealth <= 5 && newHealth > 0) owoSkin.StartHeartBeat();
                 else if (owoSkin.heartBeatIsActive)
                 {
                     owoSkin.StopHeartBeat();
-                    owoSkin.Feel("Death");
+                    owoSkin.Feel("Death", 3);
                 }
             }
         }
@@ -71,19 +71,19 @@ namespace OWO_Rumble
                         bool isGrounded = playerMovement.IsGrounded();
 
                         if(isGrounded)
-                            owoSkin.Feel("Jump");
+                            owoSkin.Feel("Jump", 1);
                         break;
 
                     case "PoseSetDash":
-                        owoSkin.Feel("Dash");
+                        owoSkin.Feel("Dash", 1);
                         break;
                     case "PoseSetDisc" or "PoseSetBall" or "PoseSetSpawnPillar" or "PoseSetSpawnCube" or "PoseSetWall_Grounded":
-                        owoSkin.Feel("Generate Stone");
+                        owoSkin.Feel("Generate Stone", 0);
                         break;
 
 
                     case "PoseSetStraight" or "PoseSetUppercut" or "PoseSetKick" or "PoseSetStomp" or "PoseSetParry" or "PoseSetFlick" or "PoseSetRight" or "PoseSetExplode":
-                        owoSkin.Feel("Pose Complete");
+                        owoSkin.Feel("Pose Complete", 0);
                         break;
 
                     default:
@@ -99,7 +99,7 @@ namespace OWO_Rumble
             public static void Postfix(PlayerMovement __instance)
             {
                 if (__instance.ParentController.ControllerType != ControllerType.Local) return;
-                owoSkin.Feel("Landing");
+                owoSkin.Feel("Landing", 1);
             }
         }
 
@@ -127,7 +127,7 @@ namespace OWO_Rumble
             public static void Postfix(PlayerController controller, int tierPoints, Vector3 direction, bool disablePIDControllers = true, string structureName = "", float knockbackMultiplier = 1f, float forceModifier = 1f)
             {
                 if (controller.ControllerType != ControllerType.Local) return;
-                owoSkin.Feel("Knockback");
+                owoSkin.Feel("Knockback", 1);
             }
         }
     }
