@@ -159,30 +159,31 @@ namespace Rumble_OWO
             heartBeatIsActive = false;
         }
 
-        #endregion        
-        
-        #region OnGuard
+        #endregion
 
+        #region OnGuard
+        Task guardFunction = null;
         public async Task OnGuardFuncAsync()
         {
             while (onGuardIsActive)
             {
-                await Task.Delay(250);
                 Feel("Pose Guard");
-                await Task.Delay(250);
+                await Task.Delay(1000);
             }
+            guardFunction = null;
         }
         public void StartOnGuard()
         {
-            if (onGuardIsActive) return;
+            if (onGuardIsActive || guardFunction != null) return;
 
             onGuardIsActive = true;
-            OnGuardFuncAsync();
+            guardFunction = OnGuardFuncAsync();
         }
 
         public void StopOnGuard()
         {
             onGuardIsActive = false;
+            
         }
 
         #endregion
