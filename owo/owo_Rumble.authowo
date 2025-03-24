@@ -4,8 +4,8 @@
 3~Impact~100,1,90,0,0,0,Hit~impact-2~Damage#
 4~Knockback~80,1,70,0,0,0,Hit|0%100,1%100,3%100,2%100&40,4,70,0,300,0,Numbness|0%100,1%100,3%100,2%100~impact-2~Damage#
 5~Dash~70,3,70,0,300,0,Slip|0%100,1%100,3%100,2%100,7%100,6%100,9%100,8%100~environment-1~Movement#
-6~Jump~60,1,60,0,100,0,Fall|9%100,8%100,3%100,2%100~environment-5~Movement#
-7~Landing~60,2,70,0,0,0,Land|9%100,8%100,2%100,3%100~environment-3~Movement#
+6~Jump~60,1,75,0,100,0,Fall|9%100,8%100,3%100,2%100~environment-5~Movement#
+7~Landing~60,1,75,0,100,0,Land|9%100,8%100,2%100,3%100~environment-3~Movement#
 8~Generate Stone~30,3,90,100,0,0,Quake|3%100,2%100,9%100,8%100,5%50,4%50~environment-7~Bending#
 9~Pose Complete~10,1,60,0,0,0,Hit|0%100,1%100,5%70,4%70,3%100,2%100,7%100,6%100,8%100,9%100~interaction-1~Bending#
 10~Pose Guard~30,3,80,100,100,0,|0%100,1%100,5%80,4%80~interaction-3~Bending
